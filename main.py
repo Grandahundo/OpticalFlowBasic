@@ -2,15 +2,21 @@ import torch
 import numpy as np
 import cv2
 import torch.nn.functional as F
-from torchvision.models.optical_flow import raft_small, Raft_Small_Weights
+# from torchvision.models.optical_flow import raft_small, Raft_Small_Weights
+# 修改导入
+from torchvision.models.optical_flow import raft_large, Raft_Large_Weights
+
+# 在 __init__ 中修改
+# weights 选择 C_T_SKHT_V2 是官方推荐的针对通用视频效果最好的版本
+# self.raft_model = raft_large(weights=Raft_Large_Weights.DEFAULT).to(self._device).eval()
 from pathlib import Path
 from tqdm import tqdm # 建议安装: pip install tqdm (进度条)
 
 # --- 1. 环境准备 ---
 device = "cuda" if torch.cuda.is_available() else "cpu"
 # 使用最新的 Weights API 加载模型
-weights = Raft_Small_Weights.DEFAULT
-model = raft_small(weights=weights).to(device).eval()
+weights = Raft_Large_Weights.DEFAULT
+model = raft_large(weights=weights).to(device).eval()
 
 # --- 2. 核心功能函数 ---
 
@@ -101,7 +107,7 @@ def process_video_frames(input_dir, output_dir):
         # 保存：保持和原图序号对应
         save_name = output_path / f"flow_{i:04d}.png"
         # 在 preprocess_image 里面增加
-        img = cv2.GaussianBlur(vis_flow, (3, 3), 0)
+        # img = cv2.GaussianBlur(vis_flow, (3, 3), 0)
         cv2.imwrite(str(save_name), vis_flow)
 
 if __name__ == "__main__":

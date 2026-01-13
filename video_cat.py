@@ -59,8 +59,8 @@ def side_by_side_video(video1_path, video2_path, output_path, fps=None):
 
 if __name__ == "__main__":
     # 使用示例
-    video_left = "my_new_video.mp4"    # 左侧：原视频
-    video_right = "my_new_video_with_gaussian.mp4"      # 右侧：光流视频
+    video_left = "motion_test.mp4"    # 左侧：原视频
+    video_right = "my_new_video.mp4"      # 右侧：光流视频
     result_name = "comparison_result.mp4"
     
     side_by_side_video(video_left, video_right, result_name)
