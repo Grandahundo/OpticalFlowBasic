@@ -68,7 +68,7 @@ def split_video_to_frames(video_path, output_dir, num_frames):
 # --- 使用示例 ---
 if __name__ == "__main__":
     # 你可以把这里换成你自己的视频路径
-    my_video = "test_video.mp4" 
+    my_video = "motion_test.mp4" 
     my_output = "extracted_images"
     target_number = 1000 # 我想提取 20 张
     
