@@ -43,9 +43,14 @@
 
 ### 左右对比演示 (Comparison Result)
 
-https://github.com/user-attachments/assets/426ed4ad-62f8-495e-b0c3-fa2667959175
+
+
+
+https://github.com/user-attachments/assets/eb15836a-5ac5-489f-8b9a-b507e01091cf
+
 
 
 *(注：如果无法直接播放，请检查视频路径是否正确)*
+
 
 
