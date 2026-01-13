@@ -43,18 +43,9 @@
 
 ### 左右对比演示 (Comparison Result)
 
-<video src="[opticalFlow/comparison_result.mp4](https://github.com/user-attachments/assets/2502a9a8-a1db-4558-90d4-29e1fe473b60
-)" width="100%" controls>
-  您的浏览器不支持视频播放。
-</video>
-
-
-
-
-
-
 https://github.com/user-attachments/assets/426ed4ad-62f8-495e-b0c3-fa2667959175
 
 
 *(注：如果无法直接播放，请检查视频路径是否正确)*
+
 
